@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            background-image: url("stock.png");
+            background-repeat:no-repeat ;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        form{
+            padding: px;
+            text-align: center;
+         }
+        input{
+            padding:10px;
+            font-size: 20px;
+            border:1px solid rebeccapurple;
+            border-radius: 10px;
+        }
+        .message{
+            font-size: 10px;
+            margin-top: 5px;
+        }
+        input[type='submit']{
+        background-color: rgb(72, 0, 255);
+        color:black;
+        border-radius: 10px;
+        padding: 10px;
+        }
+        input[type='submit']:hover{
+        background-color: green;
+        transform: scale(1.05);
+        cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <center>
+        <div id="mainid">
+            <form onsubmit="return(sub())" name="myform">
+                 <form id="myform" action="home.html">
+                    <label for="name">Name: </label>
+                    <input type="text" id="name"onkeyup="validateName()"required>
+                    <div class="message"id="nameMessage" ></div>
+                    <br>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email"onkeyup="validateEmail()"required>
+                    <div class="message"id="emailMessage"></div>
+                    <br>
+                    <label for="password">Password: </label>
+                    <input type="password" id="password"onkeyup="validatePassword()"required>
+                    <div class="message"id="passwordMessage"></div>
+
+                    <br>
+                    <label for="city">City:</label>
+                <select name="city" id="city">
+                   <option value="Select">Select</option>
+                    <option value="noida">Noida</option>
+                    <option value="Delhi">delhi</option>
+                    <option value="Mohali">Mohali</option>
+                </select>
+                <br>
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" value="male" id="male">male
+                <input type="radio" name="gender" value="female">female<br><br>
+                <span class="error" id="gendererror"></span>
+                
+                    <input type="submit"value="submit form">
+                   
+            </form>
+            <script src="./form.js"></script> 
+            
+                
+    </center>   
+   
+    
+</body>
+</html>
